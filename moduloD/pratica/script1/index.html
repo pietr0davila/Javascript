@@ -3,9 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Condicionais</title>
+    <title>Medidor de velocidade</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #333;
+            color: aliceblue;
+            font: normal 1.5em Helvetica;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Medidor de velocidade</h1>
+    <input type="number" name="userIn" id="userIn">
+    <input type="button" value="Enviar" onclick="enviado()">
+    <p id="txt"></p>
+    <script>
+        function enviado(){
+            var speedTxt = document.querySelector("input#userIn");    
+            var paragraph = document.querySelector("p#txt");
+            var speed = Number(speedTxt.value);
+            var up = speed - 60;
+            if (up > 0){
+                paragraph.innerHTML = `Você está ${up}km/h acima da velocidade permitida (60). Você foi <strong>MULTADO!</strong>`;                
+            } else{
+                paragraph.innerHTML = "Continue dirigindo com segurança!";
+            }
+        }
+        </script>
 </body>
 </html>
