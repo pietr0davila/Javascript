@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            color: whitesmoke;
+            background-color: #333;
+            font: normal 20pt Helvetica;
+        }
+        div{
+            background-color: blue;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Manipulação de Eventos DOM</h1>
+    <div id="area""></div>
+    <script>
+        let area = document.getElementById("area");
+        let cta = "Interaja...";
+
+        area.innerText = cta;
+
+        area.addEventListener("click", clicar);
+        area.addEventListener("mouseenter", entrou);
+        area.addEventListener("mouseleave", saiu);
+
+        function entrou(){
+            area.style.backgroundColor = "red";
+            area.innerText = "Entrou!";
+        }
+        function saiu(){
+            area.style.backgroundColor = "blue";
+            area.innerText = cta;
+        }
+        function clicar(){
+            area.innerText = "Clicado!";
+            area.style.background = "#432167";
+
+        }
+    </script>
+</body>
+</html>

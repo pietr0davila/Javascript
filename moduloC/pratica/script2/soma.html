@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font: lighter 15pt Arial;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Soma de 2 números</h1>
+    <input type="number" name="n1" id="n1"> +
+    <input type="number" name="n2" id="n2">
+    <input type="button" value="Somar" onclick="somar()">
+    
+    <script>
+        function somar(){
+            let txtnumero1 = document.getElementById("n1");
+            let txtnumero2 = document.getElementById("n2");
+            let numero1 = Number(txtnumero1.value);
+            let numero2 = Number(txtnumero2.value);
+            let soma = numero1 + numero2; 
+            alert(`Soma de ${numero1} + ${numero2} = ${soma}`);
+        }
+    </script>
+</body>
+</html>
