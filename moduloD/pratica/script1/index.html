@@ -24,14 +24,14 @@
     <p id="txt"></p>
     <script>
         function enviado(){
-            const SPEEDTXT = document.querySelector("input#userIn");    
-            const PARAGRAPH = document.querySelector("p#txt");
+            const SPEEDTXT = document.querySelector('input#userIn');    
+            const PARAGRAPH = document.querySelector('p#txt');
             const SPEED = Number(SPEEDTXT.value);
-            const UP = SPEED - 60;
-            if (UP > 0){
-                paragraph.innerHTML = `Você está ${UP}km/h acima da velocidade permitida (60). Você foi <strong>MULTADO!</strong>`;                
+            const SPEEDING = SPEED - 60;
+            if (SPEEDING > 0){
+                PARAGRAPH.innerHTML = `Você está ${SPEEDING}km/h acima da velocidade permitida (60). Você foi <strong>MULTADO!</strong>`;                
             } else{
-                paragraph.innerHTML = "Continue dirigindo com segurança!";
+                PARAGRAPH.innerHTML = 'Continue dirigindo com segurança!';
             }
         }
         </script>
