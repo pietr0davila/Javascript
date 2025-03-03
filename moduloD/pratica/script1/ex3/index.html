@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de nacionalidade</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            background-color: #202020;
+            color: black;
+        }
+        .hero{
+            margin-top: 50px;
+            width: 25%;
+            height: 30vh;
+            background-color: white;
+        }
+        h1{
+            text-align: center;
+            font: normal 2em Helvetica;
+            margin: 20px;
+        }
+        .form{
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+        .form input[type='text']{
+            
+            border-radius: 15px;
+            border: none;
+            background-color: #222;
+            padding-left: 10px;
+            color: white;
+        }
+        .form input[type='text']:focus{
+            outline: none;
+        }
+        .form input[type='button']{
+            margin-left: 15px;
+            width: 70px;
+            border-radius: 15px;
+            border: none;
+        }
+        .result p{
+            font: bolder 2em Arial;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>Where are you from?</h1>
+        <div class="form">
+            <input type="text" name="country" id="country"><br>
+            <input type="button" value="Send" onclick="clicked()">
+        </div>
+    
+        <div class="result" id="result"></div>
+    
+    </div>
+
+    <script>
+        function clicked(){
+            const NACIONALITY = document.querySelector('input#country').value;
+            const RESULT = document.querySelector('div#result');
+            if (
+                NACIONALITY == 'Brasil' ||
+                NACIONALITY == 'brasil' ||
+                NACIONALITY == 'Brazil' ||
+                NACIONALITY == 'brazil' ) {
+            
+                RESULT.innerHTML = '<p>Você é Brasileiro</p>';
+            } else {
+                RESULT.innerHTML = '<p>Você é estrangeiro</p>';
+            }
+            
+        }
+    </script>
+</body>
+</html>
