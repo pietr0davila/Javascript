@@ -38,9 +38,3 @@ section p {
 section p input {
     margin: 5px;
 }
-.result-sec {
-    width: 100%;
-    font-family: 'Times New Roman', Times, serif;
-    font: bolder 1.5em 'Time New Roman', Times;
-    text-align: center;
-}

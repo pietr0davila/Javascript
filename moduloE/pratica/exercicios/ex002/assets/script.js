@@ -1,20 +1,20 @@
 // listener
 document.querySelector('input#result').addEventListener('click', generate_table);
 
-let result = document.querySelector("section#result-sec") 
+let table = document.querySelector("select#table") 
 function generate_table() {
     const 
      GET_INPUT = document.querySelector('input#number');
-     NUMBER = Number(GET_INPUT.value);
-    if (NUMBER.length == 0) {
+    if (GET_INPUT.value.length == 0) {
         alert('Número inválido!');
         return;
     } else {
+        NUMBER = Number(GET_INPUT.value);
         for (let i = 1; i <= 10; i++){
-            let sum = NUMBER * i;
-            let newParagraphy = document.createElement('p');
-            result.appendChild(newParagraphy);
-            newParagraphy.innerText = `${NUMBER} x ${i} = ${sum}`;
+            let option = document.createElement('option');
+            table.appendChild(option);
+            option.value = `t${i}`;
+            option.innerText = `${NUMBER} x ${i} = ${num * i}`;  
         }
     }
 }
