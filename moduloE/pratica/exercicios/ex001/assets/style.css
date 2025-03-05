@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+body {
+    font: lighter 1em Helvetica;
+    color: white;
+    background-color: #008cff;
+}
+
+header h1 {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section { 
+    background-color: whitesmoke;
+    color: black;
+    width: 20%;
+    height: auto;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0px 1px 13px black;
+}
+
+section p {
+    margin: 10px;
+}
+
+section p input {
+    margin: 5px;
+}
+section input[type='button'] {
+    margin: 20px;
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    background-color: #73c0ff;
+    cursor: pointer;
+}

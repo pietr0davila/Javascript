@@ -8,8 +8,8 @@ function calc(){
     const AGE = CURRENT_YEAR - Number(TEXT_INPUT.value);
     CONTENT.innerText = '';    
     resultParagraph.innerText = '';
-    if (TEXT_INPUT.value == "") {
-        alert('[ERRO] Insira todos os valores e tente novamente');
+    if (TEXT_INPUT.value == "" || AGE <= 0) {
+        alert('[ERRO] Insira os valores corretamente e tente novamente');
     } else {
         let newImage = document.createElement('img');
         CONTENT.appendChild(newImage);
@@ -18,7 +18,7 @@ function calc(){
             resultParagraph.innerHTML = `Você tem <strong>${AGE}</strong> anos e <strong>já faleceu</strong>`;
         } else if (AGE <= 6) {
             newImage.setAttribute('src', 'assets/image/baby.jpg');
-            resultParagraph.innerHTML = `Você tem <strong>${AGE}</strong> anos e <strong>é um bebê</strong>`;
+            resultParagraph.innerHTML = `Você tem <strong>${AGE}</strong> anos, <strong>é homem e um bebê</strong>`;
 
         } else if (GENDERS[0].checked == true) {
                 if (AGE < 15) {
