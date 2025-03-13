@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #054d88;
+}
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: aliceblue;
+    margin: 20px;
+}
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section {
+    background-color: aliceblue;
+    width: 40vw;
+    height: 35vh;
+    padding: 10px;
+    margin: 25px;
+    border-radius: 15px;
+}
+section .form {
+    text-align: center;
+}
+
+select {
+    width: 160px;
+    margin: 10px 0 0 10px;
+}
+option {
+    text-align: center;
+    font-style: italic;
+    font-weight: bolder;
+}
+section .result-paragraphy {
+    font-size: 1.5em;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+}
